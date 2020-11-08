@@ -12,11 +12,7 @@ public class ConnectionManager : MonoBehaviourPunCallbacks
     void Start()
     {
         Connect();
-    }
-
-    void Update()
-    {
-        
+        PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     private void Connect() {

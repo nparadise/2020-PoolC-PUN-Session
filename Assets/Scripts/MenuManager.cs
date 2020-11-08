@@ -20,7 +20,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
     }
 
     public override void OnConnectedToMaster() {
-        if (!initialMenu.gameObject.activeInHierarchy && !PhotonNetwork.InLobby) {
+        if (PhotonNetwork.NickName != string.Empty) {
             PhotonNetwork.JoinLobby();
         }
     }

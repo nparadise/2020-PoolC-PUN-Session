@@ -33,6 +33,11 @@ public class InRoomMenu : MonoBehaviourPunCallbacks
         gameObject.SetActive(false);
     }
 
+    public void OnClickGameStart() {
+        PhotonNetwork.CurrentRoom.IsVisible = false;
+        PhotonNetwork.LoadLevel(1);
+    }
+
     public void OnClickLeaveRoom() {
         PhotonNetwork.LeaveRoom();
     }
